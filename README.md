@@ -7,3 +7,6 @@ Tasks can be added, checked off, searched, and persist locally using `localStora
 - Delete tasks individually  
 - Search bar to filter tasks in real time  
 - Automatic saving to `localStorage` for persistence
+
+
+**Live Site:** [https://samsinghh.github.io/to-do-list/]
