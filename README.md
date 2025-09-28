@@ -9,4 +9,4 @@ Tasks can be added, checked off, searched, and persist locally using `localStora
 - Automatic saving to `localStorage` for persistence
 
 
-**Live Site:** [https://samsinghh.github.io/to-do-list/](https://samsinghh.github.io/to-do-list/)
+[https://samsinghh.github.io/to-do-list/](https://samsinghh.github.io/to-do-list/)
