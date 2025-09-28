@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #252525;
+    margin: 0;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.TODO ul {
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.TODO ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem auto;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    max-width: 450px;
+    font-size: 20px;
+}
+
+.TODO ul li:hover {
+    background: #1a1a1a;
+    cursor: pointer;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox .custom {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #6c64ff;
+    border-radius: 1px;
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+}
+
+.checkbox input:checked + .custom {
+    background-color: #6c64ff;
+    border-color: #6c64ff;
+    position: relative;
+}
+
+.checkbox input:checked ~ .custom::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  left: 7px;
+  top: 1px;
+
+}
+
+.checkbox input:checked ~ .task {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.add-btn {
+    display: block;
+    margin: 1rem auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #6c64ff;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.add-btn:hover {
+    transform: scale(1.1);
+}
+.delete-btn{
+    opacity: 0;
+}
+.TODO ul li:hover .delete-btn {
+    opacity: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    justify-content: flex-end;
+}
+
+.delete-btn:hover {
+    color:#6c64ff;
+    transform: scale(1.2);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-bar {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    height: 35px;
+    max-width: 500px;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-bar:focus {
+    border-color: #1a1a1a;
+    box-shadow: 0 0 4px #1a1a1a;
+}
+
+.search-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+}
